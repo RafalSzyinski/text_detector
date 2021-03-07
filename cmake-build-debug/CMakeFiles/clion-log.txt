@@ -1,0 +1,125 @@
+conan install /home/rafal/text_detector -if=/home/rafal/text_detector/cmake-build-debug -pr=default
+Configuration:
+[settings]
+arch=x86_64
+arch_build=x86_64
+build_type=Release
+compiler=gcc
+compiler.libcxx=libstdc++11
+compiler.version=9
+cppstd=17
+os=Linux
+os_build=Linux
+[options]
+[build_requires]
+[env]
+
+conanfile.txt: Installing package
+Requirements
+    brotli/1.0.9 from 'conan-center' - Cache
+    bzip2/1.0.8 from 'conan-center' - Cache
+    eigen/3.3.9 from 'conan-center' - Cache
+    freetype/2.10.4 from 'conan-center' - Cache
+    gflags/2.2.2 from 'conan-center' - Cache
+    glib/2.67.0 from 'conan-center' - Cache
+    glog/0.4.0 from 'conan-center' - Cache
+    gtk/system from 'conan-center' - Cache
+    harfbuzz/2.7.4 from 'conan-center' - Cache
+    jasper/2.0.25 from 'conan-center' - Cache
+    jbig/20160605 from 'conan-center' - Cache
+    libdeflate/1.7 from 'conan-center' - Cache
+    libelf/0.8.13 from 'conan-center' - Cache
+    libffi/3.3 from 'conan-center' - Cache
+    libjpeg/9d from 'conan-center' - Cache
+    libmount/2.36 from 'conan-center' - Cache
+    libpng/1.6.37 from 'conan-center' - Cache
+    libselinux/3.1 from 'conan-center' - Cache
+    libtiff/4.2.0 from 'conan-center' - Cache
+    libwebp/1.1.0 from 'conan-center' - Cache
+    opencv/4.5.0 from 'conan-center' - Cache
+    openexr/2.5.5 from 'conan-center' - Cache
+    pcre/8.44 from 'conan-center' - Cache
+    pcre2/10.33 from 'conan-center' - Cache
+    quirc/1.1 from 'conan-center' - Cache
+    xz_utils/5.2.5 from 'conan-center' - Cache
+    zlib/1.2.11 from 'conan-center' - Cache
+    zstd/1.4.8 from 'conan-center' - Cache
+Packages
+    brotli/1.0.9:6af9cc7cb931c5ad942174fd7838eb655717c709 - Cache
+    bzip2/1.0.8:da606cf731e334010b0bf6e85a2a6f891b9f36b0 - Cache
+    eigen/3.3.9:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9 - Cache
+    freetype/2.10.4:f1014dc4f9380132c471ceb778980949abf136d3 - Cache
+    gflags/2.2.2:21e1281916d3adf618b3bd57f3098f62f2674fd4 - Cache
+    glib/2.67.0:0385e7273c0d55fb125e44f6a019048e475655f4 - Cache
+    glog/0.4.0:92f46611daf4fc8eae13b7228a9f2af28e669727 - Cache
+    gtk/system:cc5e5ca8b619d2dffaaeae1e4924ae3ce085a8f1 - Cache
+    harfbuzz/2.7.4:6b574c907a86a8f2f28e3f83eb0674e7463f2873 - Cache
+    jasper/2.0.25:c0f14b099e9b359331abfa5be6f0d819983cea5b - Cache
+    jbig/20160605:f2711434c4877d0e0aa8cdcc4da2a295d5d80304 - Cache
+    libdeflate/1.7:6af9cc7cb931c5ad942174fd7838eb655717c709 - Cache
+    libelf/0.8.13:6af9cc7cb931c5ad942174fd7838eb655717c709 - Cache
+    libffi/3.3:6af9cc7cb931c5ad942174fd7838eb655717c709 - Cache
+    libjpeg/9d:6af9cc7cb931c5ad942174fd7838eb655717c709 - Cache
+    libmount/2.36:6af9cc7cb931c5ad942174fd7838eb655717c709 - Cache
+    libpng/1.6.37:f99afdbf2a1cc98ba2029817b35103455b6a9b77 - Cache
+    libselinux/3.1:6b0384e3aaa343ede5d2bd125e37a0198206de42 - Cache
+    libtiff/4.2.0:8302753393d88dd719b852c30dc285b2c793cd18 - Cache
+    libwebp/1.1.0:034afc24309e6fc60dbccb1dab5b0f9cad6ec656 - Cache
+    opencv/4.5.0:685b7a1a123ac359dd30c07fd98e9c8e89b5f576 - Cache
+    openexr/2.5.5:69698f6e2978013d4a5ee2a23b636a4c92eede84 - Cache
+    pcre/8.44:5a9dce922eb15fddb52dd3f1ac71ae033f4e570d - Cache
+    pcre2/10.33:3b544e62795c293d95ba624360f2fc91ca32ce44 - Cache
+    quirc/1.1:82c12ed3c6890f0bc8e954bd836c9da56b845711 - Cache
+    xz_utils/5.2.5:6af9cc7cb931c5ad942174fd7838eb655717c709 - Cache
+    zlib/1.2.11:6af9cc7cb931c5ad942174fd7838eb655717c709 - Cache
+    zstd/1.4.8:6af9cc7cb931c5ad942174fd7838eb655717c709 - Cache
+
+Installing (downloading, building) binaries...
+brotli/1.0.9: Already installed!
+bzip2/1.0.8: Already installed!
+bzip2/1.0.8: Appending PATH environment variable: /home/rafal/.conan/data/bzip2/1.0.8/_/_/package/da606cf731e334010b0bf6e85a2a6f891b9f36b0/bin
+eigen/3.3.9: Already installed!
+gflags/2.2.2: Already installed!
+gtk/system: Already installed!
+jbig/20160605: Already installed!
+jbig/20160605: Appending PATH environment variable: /home/rafal/.conan/data/jbig/20160605/_/_/package/f2711434c4877d0e0aa8cdcc4da2a295d5d80304/bin
+libdeflate/1.7: Already installed!
+libelf/0.8.13: Already installed!
+libffi/3.3: Already installed!
+libjpeg/9d: Already installed!
+libmount/2.36: Already installed!
+libwebp/1.1.0: Already installed!
+quirc/1.1: Already installed!
+xz_utils/5.2.5: Already installed!
+zlib/1.2.11: Already installed!
+zstd/1.4.8: Already installed!
+glog/0.4.0: Already installed!
+jasper/2.0.25: Already installed!
+libpng/1.6.37: Already installed!
+libtiff/4.2.0: Already installed!
+openexr/2.5.5: Already installed!
+pcre/8.44: Already installed!
+pcre/8.44: Appending PATH environment variable: /home/rafal/.conan/data/pcre/8.44/_/_/package/5a9dce922eb15fddb52dd3f1ac71ae033f4e570d/bin
+pcre2/10.33: Already installed!
+pcre2/10.33: Appending PATH environment variable: /home/rafal/.conan/data/pcre2/10.33/_/_/package/3b544e62795c293d95ba624360f2fc91ca32ce44/bin
+freetype/2.10.4: Already installed!
+libselinux/3.1: Already installed!
+glib/2.67.0: Already installed!
+glib/2.67.0: Appending PATH env var with: /home/rafal/.conan/data/glib/2.67.0/_/_/package/0385e7273c0d55fb125e44f6a019048e475655f4/bin
+harfbuzz/2.7.4: Already installed!
+opencv/4.5.0: Already installed!
+conanfile.txt: Generator txt created conanbuildinfo.txt
+conanfile.txt: Generator cmake created conanbuildinfo.cmake
+conanfile.txt: Generated conaninfo.txt
+conanfile.txt: Generated graphinfo
+/snap/clion/143/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/rafal/text_detector
+-- Conan: Adjusting output directories
+-- Conan: Using cmake global configuration
+-- Conan: Adjusting default RPATHs Conan policies
+-- Conan: Adjusting language standard
+-- Current conanbuildinfo.cmake directory: /home/rafal/text_detector/cmake-build-debug
+-- Conan: Compiler GCC>=5, checking major version 9
+-- Conan: Checking correct version: 9
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/rafal/text_detector/cmake-build-debug
