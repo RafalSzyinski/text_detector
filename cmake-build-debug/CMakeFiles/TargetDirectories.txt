@@ -1,3 +1,0 @@
-/home/rafal/text_detector/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/rafal/text_detector/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/rafal/text_detector/cmake-build-debug/CMakeFiles/text_detector.dir
