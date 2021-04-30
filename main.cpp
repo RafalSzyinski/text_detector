@@ -1,39 +1,24 @@
-#include <opencv2/opencv.hpp>
+#include "opencv2/opencv.hpp"
 
-#include <iostream>
-#include <vector>
-
-int main(int argc, char** argv)
+int main()
 {
-    if (argc != 2)
-    {
-        std::cerr << "Detektor kol Hougha\nSposob uzycia: " << argv[0] << " <imagename>\n" << std::endl;
+    cv::VideoCapture video_capture;
+    if (!video_capture.open(0)) {
         return EXIT_FAILURE;
     }
+    cv::Mat frame;
+    while (true) {
+        video_capture >> frame;
 
-    cv::Mat src;
-    cv::Mat image;
-
-    src = cv::imread(argv[1], 1);
-    if (src.empty())
-    {
-        std::cerr << "Nie udalo sie wczytac " << argv[1] << std::endl;
-        return EXIT_FAILURE;
+        imshow("Image", frame);
+        const int esc_key = 27;
+        if (cv::waitKey(10) == esc_key) {
+            break;
+        }
     }
 
-    cv::cvtColor(src, image, cv::COLOR_BGR2GRAY);
-    cv::GaussianBlur(image, image, cv::Size(5, 5), 0, 0);
-
-    std::vector<cv::Vec3f> circles;
-    cv::HoughCircles(image, circles, cv::HOUGH_GRADIENT, 4, image.cols / 5);
-
-    for (size_t i = 0; i < circles.size(); ++i)
-    {
-        cv::circle(src, cv::Point(cvRound(circles[i][0]), cvRound(circles[i][1])), cvRound(circles[i][2]), cv::Scalar(0, 0, 255), 2, cv::LINE_AA);
-    }
-
-    cv::imshow("Circles", src);
-    cv::waitKey();
+    cv::destroyAllWindows();
+    video_capture.release();
 
     return 0;
 }

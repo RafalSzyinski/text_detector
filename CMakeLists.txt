@@ -1,9 +1,15 @@
-cmake_minimum_required(VERSION 3.19)
-project(text_detector)
+cmake_minimum_required(VERSION 3.16)
+project(FaceDetector)
 
 set(CMAKE_CXX_STANDARD 14)
-include(${PROJECT_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
 
-add_executable(${PROJECT_NAME} main.cpp)
-target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
+file(GLOB SOURCES
+        ${PROJECT_SOURCE_DIR}/*.cpp
+        ${PROJECT_SOURCE_DIR}/*.h)
+
+add_executable(${PROJECT_NAME} ${SOURCES})
+
+# OpenCV setup
+find_package(OpenCV REQUIRED)
+target_include_directories(${PROJECT_NAME} PRIVATE ${OpenCV_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
