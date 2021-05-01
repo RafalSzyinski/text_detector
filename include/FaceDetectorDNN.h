@@ -1,7 +1,3 @@
-//
-// Created by rafal on 30.04.2021.
-//
-
 #ifndef FACEDETECTOR_FACEDETECTORDNN_H
 #define FACEDETECTOR_FACEDETECTORDNN_H
 
