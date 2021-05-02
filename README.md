@@ -31,7 +31,7 @@ The program uses the [caffe model](https://caffe.berkeleyvision.org/) as a neura
 To build a project, you need to have the [OpenCV](https://github.com/opencv/opencv) library installed on your PC. 
 
 Build this directory
-```bash
+```
 mkdir build && cd build
 cmake..
 cmake --build .
@@ -40,9 +40,3 @@ Then run
 ```
 ./FaceDetector
 ```
-
-### Links
-
-The program was created on the basis of: 
-* https://github.com/bewagner/visuals/tree/blog-post-1
-* https://learnopencv.com/face-detection-opencv-dlib-and-deep-learning-c-python/

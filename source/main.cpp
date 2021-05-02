@@ -1,40 +1,36 @@
 #include "opencv2/opencv.hpp"
-#include "opencv2/objdetect.hpp"
 #include "FaceDetectorDNN.h"
+#include "FaceDetectorCascade.h"
 
-int main(int argc, char **argv)
+int main()
 {
     cv::VideoCapture video_capture;
     if (!video_capture.open(0))
         return 0;
 
-    FaceDetectorDNN fDetector;
-    cv::CascadeClassifier fd;
-    if(!fd.load(FACE_DETECION_HAARCASCADE))
-    {
-        std::cout << "Dupa";
-        return -1;
-    }
+    FaceDetectorDNN detectorDnn;
+    FaceDetectorCascade detectorCascade;
     cv::Mat frame;
     while (true)
     {
         video_capture >> frame;
+        cv::Mat copyFrame = frame.clone();
 
-        std::vector<cv::Rect> faces;
-        fd.detectMultiScale(frame, faces, 1.5, 3,  cv::CASCADE_SCALE_IMAGE);
+        detectorCascade.show(frame);
+        detectorDnn.show(copyFrame);
 
-        for (auto& i : faces)
-            cv::rectangle(frame, i, cv::Scalar(255, 0, 0), 2, 8, 0);
-
-        //fDetector.show(frame);
-
-        cv::imshow("Face", frame);
         if (cv::waitKey(10) == 27)
             break;
 
-        try { //cv::getWindowImageRect(fDetector.getLabel());
-            cv::getWindowImageRect("Face");}
-        catch (...) { break; }
+        try
+        {
+            cv::getWindowImageRect(detectorDnn.getLabel());
+            cv::getWindowImageRect(detectorCascade.getLabel());
+        }
+        catch (...)
+        {
+            break;
+        }
     }
 
     cv::destroyAllWindows();

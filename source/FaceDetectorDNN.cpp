@@ -5,7 +5,6 @@
 FaceDetectorDNN::FaceDetectorDNN() : threshold(0.5), height(300), width(300), scale(1.0), mean_value(104.0, 177.0, 123.0), label("FaceDetectorDNN")
 {
     network = cv::dnn::readNetFromCaffe(FACE_DETECTION_CONFIGURATION, FACE_DETECTION_WEIGHTS);
-
     if (network.empty())
         throw std::invalid_argument("Cannot create DNN");
 }
