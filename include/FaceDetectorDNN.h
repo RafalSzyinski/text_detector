@@ -14,9 +14,12 @@ private:
     const double scale;
     const cv::Scalar mean_value;
     const float threshold;
+    const std::string label;
 public:
     FaceDetectorDNN();
     std::vector<cv::Rect> detectFace(const cv::Mat& frame);
+    void show(cv::Mat& frame);
+    std::string getLabel() const;
 };
 
 

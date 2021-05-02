@@ -2,7 +2,7 @@
 
 #include "opencv2/opencv.hpp"
 
-FaceDetectorDNN::FaceDetectorDNN() : threshold(0.5), height(300), width(300), scale(1.0), mean_value(104.0, 177.0, 123.0)
+FaceDetectorDNN::FaceDetectorDNN() : threshold(0.5), height(300), width(300), scale(1.0), mean_value(104.0, 177.0, 123.0), label("FaceDetectorDNN")
 {
     network = cv::dnn::readNetFromCaffe(FACE_DETECTION_CONFIGURATION, FACE_DETECTION_WEIGHTS);
 
@@ -32,5 +32,28 @@ std::vector<cv::Rect> FaceDetectorDNN::detectFace(const cv::Mat& frame)
     }
 
     return faces;
+}
+
+void FaceDetectorDNN::show(cv::Mat& frame)
+{
+    auto rectangles = detectFace(frame);
+    cv::Scalar color(0x54, 0xA2, 0xD2);
+    int frame_thickness = 4;
+    for (const auto& r : rectangles)
+    {
+        cv::rectangle(frame, r, color, frame_thickness);
+        std::string sizeText = std::to_string(r.size().width) + "x" + std::to_string(r.size().height);
+        cv::putText(frame, sizeText, r.br(), cv::FONT_HERSHEY_SIMPLEX, 0.5, color);
+
+        cv::Point labelPosition = r.tl();
+        labelPosition.y -= 3;
+        cv::putText(frame, label, labelPosition, cv::FONT_HERSHEY_SIMPLEX, 0.5, color);
+    }
+    imshow(label, frame);
+}
+
+std::string FaceDetectorDNN::getLabel() const
+{
+    return label;
 }
 

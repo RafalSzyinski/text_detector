@@ -16,15 +16,33 @@ The greater the number of layers to be processed, the deeper the network, theref
 
 #### FaceDetectorDNN
 
-The program uses the caffe model as a neural network, which consists of two files: 
+The program uses the [caffe model](https://caffe.berkeleyvision.org/) as a neural network, which consists of two files: 
 * [deloy.prototxt](assets/deploy.prototxt) - which describes the model archtecture
-* [res10_300x300_ssd_iter_140000_fp16.caffemodel](assets/res10_300x300_ssd_iter_140000_fp16.caffemodel) - is the binary data for the model weights.
+* [res10_300x300_ssd_iter_140000_fp16.caffemodel](assets/res10_300x300_ssd_iter_140000_fp16.caffemodel) - is the binary data for the model weights
 
 <p align="center">  
   <img src="/images/ExampleDNN.png">
 </p>
 
+### Haar Cascade
+
+### Building
+
+To build a project, you need to have the [OpenCV](https://github.com/opencv/opencv) library installed on your PC. 
+
+Build this directory
+```bash
+mkdir build && cd build
+cmake..
+cmake --build .
+```
+Then run
+```
+./FaceDetector
+```
+
 ### Links
 
 The program was created on the basis of: 
 * https://github.com/bewagner/visuals/tree/blog-post-1
+* https://learnopencv.com/face-detection-opencv-dlib-and-deep-learning-c-python/
